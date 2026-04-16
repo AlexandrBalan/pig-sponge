@@ -26,7 +26,10 @@ public class Pig {
 
     // Implement your solution here!
     public static String pigLatin(String sentence) {
-        return null;
+        String[] words = sentence.split(" ");
+        String result = "";
+
+        
     }
 
 
