@@ -29,7 +29,32 @@ public class Pig {
         String[] words = sentence.split(" ");
         String result = "";
 
-        
+        for(String word : words) {
+            result += pigLatinSingleWord(word); // make sure the word is converted to pig latin
+            result += " ";
+        }
+
+
+        //remove any extra spaces if there are any
+        result = result.substring(0, result.length() -1);
+
+
+        return result;
+
+    }
+
+
+    private static String pigLatinSingleWord(String word) {
+        if(word.charAt(0) == 'a' || word.charAt(0) == 'e' || word.charAt(0) == 'i' || word.charAt(0) == 'o' || word.charAt(0) == 'u') {
+            return word;
+        }
+
+        char firstletter = word.charAt(0); //start with the very first letter which is 0
+        word = word.substring(1);
+        word = word + firstletter;
+
+        return word + "ay";
+        //add the "ay " to the end of the string
     }
 
 
