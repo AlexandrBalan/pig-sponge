@@ -31,14 +31,14 @@ public class Pig {
 
         for(String word : words) {
             result += pigLatinSingleWord(word); // make sure the word is converted to pig latin
-            result += " ";
+            result += " "; //print out the result after that
         }
 
 
         //remove any extra spaces if there are any
         result = result.substring(0, result.length() -1);
 
-
+        //return the result
         return result;
 
     }
@@ -51,7 +51,7 @@ public class Pig {
 
         char firstletter = word.charAt(0); //start with the very first letter which is 0
         word = word.substring(1);
-        word = word + firstletter;
+        word = word + firstletter; // make sure it grabs the first letter
 
         return word + "ay";
         //add the "ay " to the end of the string
